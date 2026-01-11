@@ -49,10 +49,15 @@
     }
 
     .intro {
-        margin-top: 200px;
-        grid-column: span 4;
+        margin-top: 150px;
+        grid-column: span 6;
         z-index: 3; /* Ensure text is above overlay */
         position: relative;
+         background: rgba(0, 0, 0, 0.3);
+         border: 1px solid #1111117c;
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
     }
 
     h1 {
@@ -91,11 +96,10 @@
     }
 
     /* Mobile responsiveness */
-    @media (max-width: 768px) {
+    @media (max-width: 800px) {
         .intro {
-            margin-top: 200px; /* Reduced top margin for mobile */
-            grid-column: span 12; /* Full width on mobile assuming 12-column grid */
-            padding: 0 1rem; /* Add horizontal padding for edges */
+            margin-top: 150px; /* Reduced top margin for mobile */
+            grid-column: span 9; /* Full width on mobile assuming 12-column grid */
         }
 
         .overlay {
