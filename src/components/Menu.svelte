@@ -65,7 +65,7 @@
             {/each}
         </div>
 
-        <div class="menu-items">
+        <div use:reveal  class="menu-items">
             {#each menuItems[activeCategory] as item}
                 <div class="menu-item">
                     <div class="item-info">
