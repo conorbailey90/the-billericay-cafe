@@ -126,4 +126,10 @@
         }
     }
 
+      @media (max-width: 500px) {
+        .intro {
+            grid-column: span 12; /* Full width on mobile assuming 12-column grid */
+        }
+      }
+
 </style>
