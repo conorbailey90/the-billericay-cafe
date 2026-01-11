@@ -23,7 +23,7 @@
 <style>
     section { 
         position: relative;
-        min-height: 100vh;
+        min-height: 100svh;
         display: flex;
         justify-content: center;
         align-items: flex-start; /* Ensure content starts from top on smaller screens */
@@ -128,7 +128,8 @@
 
       @media (max-width: 500px) {
         .intro {
-            grid-column: span 12; /* Full width on mobile assuming 12-column grid */
+            text-align: center;
+            grid-column: 2 / span 10; /* Full width on mobile assuming 12-column grid */
         }
       }
 
