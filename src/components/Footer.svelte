@@ -25,9 +25,9 @@
                 <div class="link-group">
                     <h4>Visit Us</h4>
                     <ul>
-                        <li><a href="#location">High Street, Billericay</a></li>
-                        <li><a href="#hours">Open 7 Days a Week</a></li>
-                        <li><a href="#hours">7:00 AM - 5:00 PM</a></li>
+                        <li>High Street, Billericay</li>
+                        <li>Open 7 Days a Week</li>
+                        <li>7:00 AM - 5:00 PM</li>
                     </ul>
                 </div>
 
