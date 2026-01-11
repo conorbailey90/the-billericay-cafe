@@ -1,20 +1,21 @@
 <script>
     import { reveal } from "$lib/actions/reveal";
     import Container from "./Container.svelte";
+    import { base } from '$app/paths';
 
     const images = [
-        { src: '/images/cakes.jpg', alt: 'Coffee being poured' },
-        { src: '/images/coffees.jpg', alt: 'Fresh bagels' },
-        { src: '/images/cakes.jpg', alt: 'Coffee shop interior' },
-        { src: '/images/coffees.jpg', alt: 'Latte art' },
-        { src: '/images/cakes.jpg', alt: 'Pastries display' },
-        { src: '/images/coffees.jpg', alt: 'Milkshake' },
-        { src: '/images/cakes.jpg', alt: 'Pastries display' },
-        { src: '/images/coffees.jpg', alt: 'Milkshake' },
-        { src: '/images/cakes.jpg', alt: 'Pastries display' },
-        { src: '/images/coffees.jpg', alt: 'Milkshake' },
-        { src: '/images/cakes.jpg', alt: 'Pastries display' },
-        { src: '/images/coffees.jpg', alt: 'Milkshake' }
+        { src: `${base}/images/cakes.jpg`, alt: 'Coffee being poured' },
+        { src: `${base}/images/coffees.jpg`, alt: 'Fresh bagels' },
+        { src: `${base}/images/cakes.jpg`, alt: 'Coffee shop interior' },
+        { src: `${base}/images/coffees.jpg`, alt: 'Latte art' },
+        { src: `${base}/images/cakes.jpg`, alt: 'Pastries display' },
+        { src: `${base}/images/coffees.jpg`, alt: 'Milkshake' },
+        { src: `${base}/images/cakes.jpg`, alt: 'Pastries display' },
+        { src: `${base}/images/coffees.jpg`, alt: 'Milkshake' },
+        { src: `${base}/images/cakes.jpg`, alt: 'Pastries display' },
+        { src: `${base}/images/coffees.jpg`, alt: 'Milkshake' },
+        { src: `${base}/images/cakes.jpg`, alt: 'Pastries display' },
+        { src: `${base}/images/coffees.jpg`, alt: 'Milkshake' }
     ];
 </script>
 

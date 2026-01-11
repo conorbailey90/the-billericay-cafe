@@ -1,6 +1,7 @@
 <script>
     import { reveal } from "$lib/actions/reveal";
     import Container from "./Container.svelte";
+    import { base } from '$app/paths';
 </script>
 
 <section id="about">
@@ -14,8 +15,8 @@
         </div>
         
         <div use:reveal class="images">
-            <img src="/images/cakes.jpg" alt="Coffee shop interior" class="image-1">
-            <img src="/images/coffees.jpg" alt="Fresh coffee" class="image-2">
+            <img src="{base}/images/cakes.jpg" alt="Coffee shop interior" class="image-1">
+            <img src="{base}/images/coffees.jpg" alt="Fresh coffee" class="image-2">
         </div>
     </Container>
 </section>

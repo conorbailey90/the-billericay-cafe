@@ -1,10 +1,11 @@
 <script>
     import { reveal } from "$lib/actions/reveal";
     import Container from "./Container.svelte";
+        import { base } from '$app/paths';
 </script>
 
 <section id="home">
-    <img src="/images/hero.webp" alt="" class="hero">
+    <img src="{base}/images/hero.webp" alt="" class="hero">
     <div class="overlay"></div>
     <Container>
         <div use:reveal class="intro">
