@@ -46,15 +46,17 @@
 </script>
 
 <section id="testimonials">
+    
     <Container>
         <div class="header">
             <span class="label">Testimonials</span>
             <h2>What Our Customers Say</h2>
         </div>
+           <div class="overlay_1"></div>
+        <div class="overlay_2"></div>
         
         <div class="slider-container">
-            <div class="overlay_1"></div>
-             <div class="overlay_2"></div>
+         
             <div class="slider-track">
                 {#each testimonials as testimonial}
                     <div class="testimonial-tile">
@@ -113,15 +115,15 @@
 
     }
 
-     .slider-track {
-        display: flex;
-        animation: infiniteSlide 40s linear infinite;
-        gap: 1rem;
-        will-change: transform;
-        /* border: 1px solid red; */
-        width: min-content;
-    }
-    
+  .slider-track {
+    display: flex;
+    /* Use max-content to ensure the track takes full width of children */
+    width: max-content; 
+    animation: infiniteSlide 40s linear infinite;
+    /* Ensure gap is consistent */
+    gap: 1rem;
+    will-change: transform;
+}
     .slider-track:hover {
         animation-play-state: paused;
     }
@@ -132,7 +134,7 @@
         width: 100px;
         height: 100%;
         background: linear-gradient(to right, #111111, transparent);
-        z-index: 6;
+        z-index: 69;
     }
 
      .overlay_2{
@@ -142,17 +144,20 @@
         width: 100px;
         height: 100%;
         background: linear-gradient(to right, transparent, #111111);
-        z-index: 6;
+        z-index: 9;
+
     }
 
-    @keyframes infiniteSlide {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
+   @keyframes infiniteSlide {
+    0% {
+        transform: translateX(0);
     }
+    100% {
+        /* Move by exactly half the track's width */
+        /* To be pixel-perfect including the gap, we subtract half a gap */
+        transform: translateX(calc(-50% - 0.5rem));
+    }
+}
 
     .testimonial-tile {
         flex: 0 0 320px;

@@ -1,7 +1,7 @@
 <script>
     import { reveal } from "$lib/actions/reveal";
     import Container from "./Container.svelte";
-        import { base } from '$app/paths';
+    import { base } from '$app/paths';
 </script>
 
 <section id="home">
@@ -12,6 +12,11 @@
             <h1>The Billericay</h1>
 
             <h4>Finest coffee, fresh bagels and sourdough, indulgent ice creams, creamy milkshakes, and more bringing the very best with unbeatable community spirit.</h4>
+            
+            <div class="cta-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#contact" class="btn btn-secondary">Visit Us</a>
+            </div>
         </div>
     </Container>
     <div class="scroll">
@@ -26,7 +31,7 @@
         min-height: 100svh;
         display: flex;
         justify-content: center;
-        align-items: flex-start; /* Ensure content starts from top on smaller screens */
+        align-items: flex-start;
     }
 
     .hero {
@@ -45,18 +50,14 @@
         width: 100%;
         height: 100%;
         z-index: 2;
-        background: linear-gradient(to bottom, #111111 calc(60px + 2rem), transparent 50%, #111111 100%);
+        background: linear-gradient(to bottom, #111111 calc(60px + 2rem), #11111184 50%, #111111 100%);
     }
 
     .intro {
         margin-top: 150px;
         grid-column: span 6;
-        z-index: 3; /* Ensure text is above overlay */
+        z-index: 3;
         position: relative;
-         background: rgba(0, 0, 0, 0.3);
-         border: 1px solid #1111117c;
-        backdrop-filter: blur(10px);
-        border-radius: 10px;
         padding: 1.5rem 1.5rem 2rem 1.5rem;
     }
 
@@ -72,8 +73,50 @@
     h4 {
         text-wrap: balance;
         margin-top: 1rem;
-        font-size: clamp(1rem, 2.5vw, 1.25rem); /* Responsive for body text */
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
         line-height: 1.4;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-block;
+        /* Made buttons smaller here */
+        padding: 0.6rem 1.25rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        border: 2px solid transparent;
+    }
+
+    .btn-primary {
+        background: #FFFFFF;
+        color: #111111;
+    }
+
+    .btn-primary:hover {
+        background: #f0f0f0;
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: #FFFFFF;
+        border: 2px solid #FFFFFF;
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
     }
 
     .scroll {
@@ -86,7 +129,7 @@
         flex-direction: column;
         bottom: 2rem;
         gap: 0.5rem;
-        opacity: 0.8; /* Subtle fade for better UX */
+        opacity: 0.8;
     }
 
     .scroll p {
@@ -98,39 +141,44 @@
     /* Mobile responsiveness */
     @media (max-width: 800px) {
         .intro {
-            margin-top: 150px; /* Reduced top margin for mobile */
-            grid-column: span 9; /* Full width on mobile assuming 12-column grid */
+            margin-top: 150px;
+            grid-column: span 9;
         }
 
-        .overlay {
-            background: linear-gradient(to bottom, #111111 calc(50px + 1.5rem), transparent 40%, #111111 100%); /* Adjust gradient for smaller screens */
-        }
-
-          h1 {
-            text-transform: uppercase;
-            font-family: "PT Sans Narrow", sans-serif;
+        h1 {
             font-size: 3rem;
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-            margin: 0;
+        }
+
+        .cta-buttons {
+            flex-direction: row; /* Prevented stacking to keep look compact */
+            gap: 0.75rem;
+        }
+
+        .btn {
+            width: auto; /* Prevented full-width on mobile */
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
         }
 
         .scroll {
-            bottom: 1rem; /* Closer to bottom on mobile */
+            bottom: 1rem;
             gap: 0.25rem;
         }
 
         .scroll svg {
             width: 20px;
-            height: 20px; /* Slightly smaller icon */
+            height: 20px;
         }
     }
 
-      @media (max-width: 500px) {
+    @media (max-width: 500px) {
         .intro {
             text-align: center;
-            grid-column: 2 / span 10; /* Full width on mobile assuming 12-column grid */
+            grid-column: 2 / span 10;
         }
-      }
 
+        .cta-buttons {
+            justify-content: center;
+        }
+    }
 </style>
